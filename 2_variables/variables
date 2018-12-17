@@ -1,0 +1,22 @@
+1. We read (get) the variable value be writing its name preceded by the $ with no space between them, for example:
+echo &my_var
+
+2. Before the Bash interperter execute every command, it first goes over every line and looks for variables. If it sees one, it immidatly replaces the variable name with its value.
+This procedure is repeated for every line in a bash script.
+
+3. Some common used arguments in bash scripts:
+----------------------------------------------
+$0 - The name of the Bash script.
+$1 - $9 - The first 9 arguments to the Bash script. (As mentioned above.)
+$# - How many arguments were passed to the Bash script.
+$@ - All the arguments supplied to the Bash script.
+$? - The exit status of the most recently run process.
+$$ - The process ID of the current script.
+$USER - The username of the user running the script.
+$HOSTNAME - The hostname of the machine the script is running on.
+$SECONDS - The number of seconds since the script was started.
+$RANDOM - Returns a different random number each time is it referred to.
+$LINENO - Returns the current line number in the Bash script.
+
+
+4. When defining variable with a single "word" it is not needed to sourund it with quotes. Yet when it contains more than a single word - we MUST enclose it within quotes.
