@@ -1,0 +1,21 @@
+1. Bash scripts are a set of commands that essentially can be run within a bash shell the same way they are wirtten on the script and vice versa.
+
+2. A script usually ends with the extnsion .sh
+
+3. To run a script it MUST have execution permissions. It can be done by applying the following permissions on the script file:
+$ sudo chmod +x myScript.sh
+
+4. When running a script we need to "prefix" it with the following: ./ , for example: 
+$ ./myScript.sh
+This is done cause when a script (or program) is being asked to run like so, Bash will ONLY look in the directories listed under the PATH variable, if the script (or program) to run is NOT
+in any of these directories, than the Bash will NOT run the script (or program). 
+This is why, for example, the normal shell commands can be run simply via their names, i.e.- 
+$ ls
+and NOT:
+$ ./ls
+
+5. If a program or a script is NOT in one of these folders, you can still run it, but the things is that you have to indicate to the Bash shell its EXACT LOCATION via either a full path or by a relative path with respect to the current working directory.
+
+6. The very first line of a BASH SCRIPT MUST be: #!/bin/bash - which basically tell the interperter who (what executable) needs to run this script. 
+
+7. Spaces are an important in scripts, either their presence or abbsence.
