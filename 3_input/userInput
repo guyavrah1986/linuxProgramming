@@ -1,0 +1,34 @@
+1. In order to get information from the user we can use the read command to ask him to insert some input, for example:
+$ echo "Please enter your name"
+Than within the script we can use the read command that gets the input that was entered by the user into a variuable, for example:
+$ read inputFromUser
+NOTE: the read commad basically "waits" for the user to insert some inpout and than press ENTER.
+
+2. We can read several "items" entered with the read command into several variables (that will be deifned in the script). The separation of variables will be according to the space tab.
+If the user provided MORE "input" (separated by space) than the number of variables in the script, then the last variable will hold the rest of the input.
+If the user provided LESS "input" (separated by space) than the number of variables in the script, then the "extra" variables will be set to null/blank.
+
+3. Each process (usually a script running) gets it's own set of files (one for STDIN, STDOUT and STDERR respectively) and they are linked when piping or redirection is invoked.
+Each process gets the following files:
+-------------------------------------
+STDIN - /proc/<processID>/fd/0
+STDOUT - /proc/<processID>/fd/1
+STDERR - /proc/<processID>/fd/2
+
+Also, the system creates some shortcuts for us:
+-----------------------------------------------
+STDIN - /dev/stdin or /proc/self/fd/0
+STDOUT - /dev/stdout or /proc/self/fd/1
+STDERR - /dev/stderr or /proc/self/fd/2
+
+4. Some notes about which option (to provide info for the script) to favour:
+-----------------------------------------------------------------------------
+a) Command line arguments:
+You should normally favor command line arguments wherever possible.
+They are the most convenient for users as the data will be stored in their command history so they can easily return to it. It is also the best approach if your script may be called by other scripts or processes (eg. maybe you want it to run periodically using CRON).
+
+b) User input (via read):
+Sometimes the nature of the data is such that it would not be ideal for it to be stored in peoples command histories etc. A good example of this is login credentials (username and password). In these circumstances it is best to read the data during script execution.
+
+c) Files provided into (via) STDIN:
+If all the script is doing is processing data in a certain way then it is probably best to work with STDIN. This way it can easily be added into a pipeline.
