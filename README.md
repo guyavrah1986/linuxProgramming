@@ -18,3 +18,16 @@ This folder holds sub-folders according to topics, more or less under the same s
 4) Arithemetic: opertators such as `let`, `expr` and the usage of $((<expression>)) (double parantheses to extract the expression value)
 
 5) If statments: if-then, if-else, if-elseif-then and case usages examples.
+
+6) Loops: 
+
+
+- linuxCommandLine:
+
+This folder holds sub-folders according to topics,  more or less under the same structure as in this tutorial: https://ryanstutorials.net/linuxtutorial/
+
+7) Wildcards: general usage and know-how about wild cards.
+
+8) Permissions: Basic permissions settings for files and directories.
+
+
