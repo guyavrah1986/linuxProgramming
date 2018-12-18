@@ -1,0 +1,49 @@
+1. The basic syntax for an if statment is as follows:
+if [ <some test> ]
+then
+	<commands>
+fi
+
+The [] actually "replace" the `test` command, which has lots of different types of tests (operations) it can perfrom, such as:
+-----------------------------------------------------------------------------------------------------------------------------
+	Operator		Description
+	--------                -----------
+	! EXPRESSION		The EXPRESSION is false.
+	-n STRING		The length of STRING is greater than zero.
+	-z STRING		The lengh of STRING is zero (ie it is empty).
+	STRING1 = STRING2	STRING1 is equal to STRING2
+	STRING1 != STRING2	STRING1 is not equal to STRING2
+	INTEGER1 -eq INTEGER2	INTEGER1 is numerically equal to INTEGER2
+	INTEGER1 -gt INTEGER2	INTEGER1 is numerically greater than INTEGER2
+	INTEGER1 -lt INTEGER2	INTEGER1 is numerically less than INTEGER2
+	-d FILE			FILE exists and is a directory.
+	-e FILE			FILE exists.
+	-r FILE			FILE exists and the read permission is granted.
+	-s FILE			FILE exists and it's size is greater than zero (ie. it is not empty).
+	-w FILE			FILE exists and the write permission is granted.
+	-x FILE			FILE exists and the execute permission is granted.
+
+NOTES:
+a) When we refer to FILE above we are actually meaning a path. Remember that a path may be absolute or relative and may refer to a file or a directory.
+
+2. The basic syntax for an if else statment is as follows:
+if [ <some test> ]
+then
+	<commands>
+else
+	<other commands>
+fi
+
+3. 2. The basic syntax for an if-elseif-else statment is as follows:
+if [ <some test> ]
+then
+	<commands>
+elif [ <some test> ] 
+then
+	<different commands>
+else
+	<other commands>
+fi
+
+
+
