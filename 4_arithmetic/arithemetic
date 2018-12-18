@@ -1,0 +1,25 @@
+1. The following arithemetic operations are availble:
+-----------------------------------------------------
+	+, -, /*, /	addition, subtraction, multiply, divide
+	var++		Increase the variable var by 1
+	var--		Decrease the variable var by 1
+	%		Modulus (Return the remainder after division)
+
+2. We can issue anyone of these operations within a bash script by "simply" using the `let` command, for example:
+$ let a=5+4 // a = 9
+$ let "a = 5 + 4" // a = 9
+NOTE: in both cases, the fact that we indicated the variable `a` to be assgined with the result, ALSO, defined it, so it can be further used
+after the above command (i.e.- we ca use `$ echo $a` to display its value).
+
+3. We can also use the `expr` command which acts very similar to `let` only it can contain spaces between the expressions and it automatically outputs the
+result to the screen (STDOUT).
+
+4. We can also use the double paranthesses along with the "extraction" of value together, like so:
+$ res=$((4 + 3)) // res = 7
+
+5. To get the length of a variable, i.e.- how many characters it is composed from, chars and/or digits (or basically any valid character)
+we can use the following:
+$ var1='Hello World!!`
+$ echo "var1 composed of ${#var1} characters"
+
+
