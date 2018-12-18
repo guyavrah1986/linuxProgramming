@@ -1,5 +1,7 @@
 # learnBashScriptingAndCommandLine
-Educational scripts for learning purposes and examples of bash scripting
+Educational scripts for learning purposes and examples of:
+- bash scripting
+- command line commands
 
 # Structure
 
