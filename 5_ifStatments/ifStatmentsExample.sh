@@ -48,5 +48,42 @@ else
 	echo "You can not go to the party"
 fi 
 
+# logical (boolean) and (&&) example
+read -p "please enter a number:" num
+if [ $num -gt 20 ] && [ $(($num % 2)) -eq 0 ]
+then
+	echo "number that was entered is even and greater than 20"
+else
+	echo "number that was entered is either NOT even OR NOT greater than 20"
+fi
+
+# logical (boolean) or (||) example
+read -p "please enter your name" name
+if [ $name = "Bob" ] || [ $name = "Alice" ]
+then
+	echo "hey there Bob or Alice"
+else
+	echo "I do not know you, cause you are not Bob nopt Alice"
+fi
+
+# case example
+read -p "please enter the one of the three number:1,2 or 3:" num
+case $num in
+	1)
+	echo "You entered $num"
+	;;
+	2)
+	echo "You entered $num"
+	;;
+	3)
+	echo "You entered $num"
+	;;
+	*)
+	echo "Your input is invalid!!"
+	;;
+esac
 
 echo "$0 - end"
+
+
+
