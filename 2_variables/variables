@@ -7,7 +7,7 @@ This procedure is repeated for every line in a bash script.
 3. Some common used arguments in bash scripts:
 ----------------------------------------------
 $0 - The name of the Bash script.
-$1 - $9 - The first 9 arguments to the Bash script. (As mentioned above.)
+$1 - $9 - The first 9 arguments to the Bash script.
 $# - How many arguments were passed to the Bash script.
 $@ - All the arguments supplied to the Bash script.
 $? - The exit status of the most recently run process.
@@ -19,4 +19,10 @@ $RANDOM - Returns a different random number each time is it referred to.
 $LINENO - Returns the current line number in the Bash script.
 
 
-4. When defining variable with a single "word" it is not needed to sourund it with quotes. Yet when it contains more than a single word - we MUST enclose it within quotes.
+4. When defining variable with a single "word" it is not needed to sourund it with quotes. Yet when it contains more than a single word(i.e.- a sentence/string with more- we MUST
+enclose it within quotes.
+
+5. It is possible to "export" variables from the "current" script to another script that will be invoked from the current script. The variables that will be sent (exported) to the 
+"invoked script" are a COPY of the "original" variables from the original script. 
+a) Any modification on the variables within the second script WILL NOT affect the "original" variables within the "invoking" script.
+b) The names of the variables exported to the invoked script MUST be the same exactly like in the original script.
