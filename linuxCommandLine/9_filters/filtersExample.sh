@@ -52,7 +52,13 @@ cut -d ' ' -f 1,2 $fileName
 echo ""
 echo ""
 
+# basic usage of `uniq` (NOTE: it removed similar lines ONLY if they are adajcent)
+uniqFileName=sampleDataForUniq.txt
+echo "uniq $uniqFileName"
+uniq $uniqFileName
 
+echo ""
+echo ""
 
 echo ""
 echo ""

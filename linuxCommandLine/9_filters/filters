@@ -1,0 +1,13 @@
+This chapter holds very basic usage examples for most of the "filtering" utiltiies, such as:
+- uniq
+- head
+- tail
+- uniq
+- sort 
+- wc (Word Count)
+- cut
+
+TODO: go over
+- sed
+- awk
+
