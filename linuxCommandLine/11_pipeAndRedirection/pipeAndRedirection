@@ -1,0 +1,33 @@
+1. Every program is automatically "linked" into 3 files of its OWN:
+0) STDIN - input (defaults to terminal)
+1) STDOUT - output (defaults to terminal)
+2) STDERR - error messages, output (defaults to terminal)
+
+Using the redirection utility (>) we can "redirect" any output of any command into a DIFFERNT file of "our own".
+NOTE: When we redirecting the oputput of a command into a file, that file will FIRST be created (if it does not exist) and only then
+the actual command we wish to invoke will be executed.
+
+2. When sending a file to a command via the input operator (<) than the command output might be different. For example,
+the `wc` command will NOT add (in addition to the word count number) the file name of the file it proccessed.
+
+3. When we wish to comboine both the "normal output" (STDOUT) and the error messages (STDERR) into a SINGLE
+file, we can do so by piping, FIRST to out "final" destination file, and then redirecting the STDERR into 
+the STDOUT, like below:
+   the command     the final destination  redirecting STDERR to STDOUT 
+$ <some command> > $errAndOutputFileName 2>&1
+
+
+4. Pipes (|) are the way that one program (command) can pass on inpout to another program, usually it will be its output.
+Several pipes can be joined together.
+For example:
+$ ls | head -3 | tail -1
+
+pipes can also be combined with redirections, like so:
+$ $ ls | head -3 | tail -1 > myoutput
+
+5. Important note (tip): When combining several pipes together, it is better to build them incremently, one after the other.This way 
+it is easier to verify that each "step" along the way indeed produces the output we wished it would.
+
+
+
+
