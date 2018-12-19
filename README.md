@@ -30,4 +30,10 @@ This folder holds sub-folders according to topics,  more or less under the same 
 
 8) Permissions: Basic permissions settings for files and directories.
 
+9) Filters: Basic usage in different filters utilities in Bash such as: head,tail,sort, uniq,cut.
 
+10) Grep & Regex: Basic usage of egrep along with some simple usage in Regex'es.
+
+11) Pipes and redirections: Basic usage of the two, combinations of the two, notes about STDIN,STDOUT, STDERR.
+
+12) Process managment: top, ps (ps -aux), kill,sleep, jobs (foreground/background), CTRL + Z (pause job) 
