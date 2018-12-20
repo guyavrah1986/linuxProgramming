@@ -1,3 +1,17 @@
-1. 
+1. While loop: same notes for the "normal" `test` usage (i.e.- the []).
+
+2. For loops:It is important that the "list" that the loop iterates over will be exactly what we wish it to be (i.e.- it has all the values we wish to iterate over).
+Also, this list of items (numbers, names, strings, etc...), MUST be "space-sperated" list, i.e.- every item must be separated from the next and previous by a single space.
+
+3. Ranges:
+a) It is important that the "two" edges of the range will be "attached" to their { or } , i.e.- this is wrong: 
+$ for val in { 2..4}
+
+b) The ragne can be "downwards as well:
+$ for val in {3..1}
+
+c) The range can be skipped by another incremental value which is NOT 1, for example skip every two numbers in the range:
+$ for val in {2..10..2}
+# output will be: 2,4,6,8,10
 
 
