@@ -1,0 +1,16 @@
+1.can be in either on of the formats:
+a) function funcName{
+	<commands>
+}
+
+b) funcName(){
+	<commands>
+}
+
+2. The function declration MUST be BEFORE any call to it within the script (similar to C/C++).
+
+3. It can read its argument the same way a script recvies its command line argument,via $1,$2,etc...
+
+4. Variables within functions can and should be declared local.
+
+
