@@ -7,6 +7,15 @@
 # ----------------------------------------------------------------------
 ########################################################################
 
+# this function is only used to return a value which is != 0
+function foo1 {
+	echo 1
+}
+
+# =======================================================================
+# =======================================================================
+# =======================================================================
+
 echo "==================================="
 echo "$0 - start"
 echo "==================================="
@@ -88,6 +97,25 @@ ls
 echo "ls | head -3 | tail -1"
 ls | head -3 | tail -1
 
+echo ""
+echo ""
+
+# here we use the `;` between the first command (the fucntion call)
+# and the second command. In this case, the second command will be
+# executed regardless of the return code value of the previous 
+# command (note that foo returns 1). 
+echo "calling foo1 followed by ; ls"
+$foo1 ; ls
+
+echo ""
+echo ""
+
+# here we use the `&&` between the first command (simulated `false`)
+# and the second command. In this case, the second command will NOT be
+# executed cause the return code value of the previous 
+# command was NOT success. 
+echo "emulating a false (non 0 return value) return value of some first command followed by && ls"
+false && ls
 
 echo ""
 echo ""

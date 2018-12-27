@@ -28,6 +28,8 @@ $ $ ls | head -3 | tail -1 > myoutput
 5. Important note (tip): When combining several pipes together, it is better to build them incremently, one after the other.This way 
 it is easier to verify that each "step" along the way indeed produces the output we wished it would.
 
+6. The difference between using `&&` to using `;`
+
 
 
 

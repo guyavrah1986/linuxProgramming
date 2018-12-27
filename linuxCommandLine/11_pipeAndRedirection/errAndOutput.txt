@@ -1,0 +1,2 @@
+ls: cannot access 'noFile': No such file or directory
+-rw-r--r-- 1 guya guya 93 Dec 27 11:47 sampleInput.txt

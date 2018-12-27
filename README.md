@@ -35,7 +35,7 @@ This folder holds sub-folders according to topics,  more or less under the same 
 
 - 10) Grep & Regex: Basic usage of `egrep` along with some simple usage in Regex'es.
 
-- 11) Pipes and redirections: Basic usage of the two, combinations of the two, notes about `STDIN`, `STDOUT`, `STDERR`.
+- 11) Pipes and redirections: Basic usage of the two, combinations of the two, notes about `STDIN`, `STDOUT`, `STDERR`.Differences between using `;` to `&&`.
 
 - 12) Process managment: `top`, `ps` (`ps -aux`), `kill`, `sleep`, `jobs` (foreground/background), `CTRL + Z` (pause job) 
 
