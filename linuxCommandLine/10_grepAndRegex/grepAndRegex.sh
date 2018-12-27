@@ -60,6 +60,18 @@ egrep "or|su|be" $fileName
 
 echo ""
 echo ""
+
+# basic usage of the `find` command - list all the files in the current folder
+# and all its sub-folders that terminates with the extension '*.txt' (note that the
+# pattern to look is sourounded with single quote.
+echo pwd
+extension=".txt"
+echo "listing all file with extension:$extension" 
+find . -type f -name '*.txt'
+
+
+echo ""
+echo ""
 echo "==================================="
 echo "$0 - end"
 echo "==================================="

@@ -33,7 +33,7 @@ This folder holds sub-folders according to topics,  more or less under the same 
 
 - 9) Filters: Basic usage in different filters utilities in Bash such as: `head`, `tail`, `sort`, `uniq`, `cut`.
 
-- 10) Grep & Regex: Basic usage of `egrep` along with some simple usage in Regex'es.
+- 10) Grep & Regex: Basic usage of `egrep` along with some simple usage in Regex'es, usage in `find` command.
 
 - 11) Pipes and redirections: Basic usage of the two, combinations of the two, notes about `STDIN`, `STDOUT`, `STDERR`.Differences between using `;` to `&&`.
 
