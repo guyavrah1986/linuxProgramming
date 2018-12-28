@@ -1,0 +1,6 @@
+[Unit]
+Description=Hello world service
+After=systemd-user-sessions.service
+[Service]
+Type=simple
+ExecStart=/home/guya/guya/dev/linuxProgramming/miscellaneousTopics/serviceInSystemd/basicService.sh
