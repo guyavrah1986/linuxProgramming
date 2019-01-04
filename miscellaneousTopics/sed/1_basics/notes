@@ -1,0 +1,14 @@
+
+1. Sed works in "3-phase" manner: 
+a) Reads - the input data from a pipe, STDIN, or file --> stores it within its "internal buffer".
+b) Execute - the SED commands on this buffer, for EVERY line (unless asked otherwise).
+c) Display - send the modified data into the output stream (STDOUT, file). After this phase is done, the internal buffer is empty.
+NOTE: If the contents of the pattern buffer are not written "back" into the original file - than eventually it will remanin the same.
+
+2. Sed can be invoked in two "ways":
+a) sed 'command(s)' <file_name>
+In this case, all the "sed commands" are applied to every line in the file noted by file_name.
+
+b) sed -f <file_with_sed_commands> <file_name>
+In this case, file_with_sed_commands is a "normal" text file with sed commands, which all will be invoked on the file given by file_name.
+  
