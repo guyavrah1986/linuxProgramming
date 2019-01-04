@@ -2,6 +2,7 @@
 Educational code and scripts for learning purposes on topics related to programming the linx OS in different aspects, such as:
 - bash scripting
 - command line commands
+- miscellaneous topics
 
 # bashScripting:
 
