@@ -10,11 +10,25 @@ reset=`tput sgr0`
 #===============================================================================================================================
 #===============================================================================================================================
 
-function checkIfFileExists {
-	if [ -e $1 ]
+function checkIfFileOrFolderExists {
+	local numOfArgs=$#
+	if [ $numOfArgs -lt 2 ]
 	then
-		echo "found $1 already exists, deleting it"
-		rm $1
+		echo "not enough arguments, aborting"
+		return 1
+	fi
+
+	if [ -$2 $1 ]
+	then
+		rmArg=""
+		echo "found that $1 already exists, deleting it"
+		if [ "$2" = "d" ]
+		then
+			echo "got the $2 additional argument"
+			rmArg="-rf"		
+		fi
+		
+		sudo rm $rmArg $1
 	fi
 }
 
@@ -24,7 +38,17 @@ echo "${green}===============================${reset}"
 
 inputFile=input.txt
 outputFile=output.txt
-checkIfFileExists $outputFile
+subFolder1=folder1
+subFolder2=folder2
+checkIfFileOrFolderExists $outputFile "e"
+#checkIfFileOrFolderExists $subFolder1/$subFolder2 "d"
+#currDir=$(pwd)
+#mkdir -p $currDir/$subFolder1/$subFolder2/
+#cd $currDir/$subFolder1/$subFolder2/
+#fileName=someFile
+#touch $fileName 
+#echo "blash blash" >$fileName
+#cd $currDir
 
 echo "input file has the following content:"
 echo "-------------------------------------"
@@ -42,13 +66,23 @@ echo ""
 patternString=one
 replacementString=ONE
 
-# in this example we simply replacing each occuerence of `one` with `ONE`.
+# 1) in this example we simply replacing each occuerence of `one` with `ONE`.
 # Some notes:
 # -----------
-# 1) s, in its simplest form (as in this case) applies its "replacement" action ONCE for every line.
+# s, in its simplest form (as in this case) applies its "replacement" action ONCE for every line.
 sed s/one/ONE/ $inputFile >$outputFile
 
 
+# 2) in this example we use the '\' (backslash) in order to indicate that the
+# forward slash is part of the argument and NOT the "normal" delimiter
+#rename s/\/$currDir\/$subFolder1\/$subFolder2\/$fileName/\/$currDir\/$subFolder1\/$subFolder2\/newFileName/
+
+# 3) In case you wish to replace a pattern which you don't know what it 
+# is in "advance", YET only when you will indeed encounter it, you can use he `&` character:
+ampersandOutputFile=ampersendFile
+sed 's/[0-9]*/& &/' $inputFile >$ampersandOutputFile
+echo "after searching for numbers strings, we get:"
+cat $ampersandOutputFile
 
 
 echo "${green}============================="
