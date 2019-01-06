@@ -1,0 +1,9 @@
+Hi 
+this 
+is test file 
+to carry out few regular expressions 
+practical with grep 
+123 456 
+Abcd
+ABCD
+testing is done
