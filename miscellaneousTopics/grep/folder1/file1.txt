@@ -1,1 +1,2 @@
 The dog is wet.
+We use here the d.g for the regualr expression example.

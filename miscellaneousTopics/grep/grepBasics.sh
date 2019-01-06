@@ -56,6 +56,70 @@ folderToSearch=. # current directory
 echo "grep -r $pattern3 $folderToSearch"
 grep -r $pattern3 $folderToSearch
 
+echo ""
+echo ""
+
+# 4) To print only the names of the files that DID contained at least one match to the searched pattern
+# use the -l option.
+pattern4=gry
+echo "grep -r -l $pattern4 $inputFile"
+grep -r -l $pattern4 $folderToSearch
+
+echo ""
+echo ""
+
+# 5) Regular expression: Every regualr expression special character can be "treated" as 
+# a "normal" character by adding the `\` in front of her.
+echo "grep -r 'd.g' $folderToSearch"
+grep -r 'd.g' $folderToSearch
+
+echo ""
+echo ""
+
+echo "grep -r 'd\.g' $folderToSearch"
+grep -r 'd\.g' $folderToSearch
+
+echo ""
+echo ""
+
+# 6) Range and reptition "classes". For every case we use on of these "regualr expression classes" we MUST add the -E option.
+# a) [a-z] - denotes a ragne of "possible" characters, in this case all the letters in their lower case form
+# b) {11}  - denotes EXACT number of times that a "regualr expression class" MUST repeat itself. In this case it is EXCTLY 11 times.
+echo "grep -r -E '[a-z]{11}' $folderToSearch"
+grep -r -E '[a-z]{11}' $folderToSearch 
+
+echo ""
+echo ""
+
+# 7) Special flags:
+# a) Find pattern in the START of the line, we use the `^` flag:
+echo "grep '^th' $inputFile"
+grep '^th' $inputFile
+
+echo ""
+echo ""
+
+# b) Find pattern in the END of the line, we use the `$` flag:
+echo "grep 'i$' $inputFile"
+grep 'i$' $inputFile
+
+echo ""
+echo ""
+
+# c) Start of the word, we use the `\<` flag:
+echo "grep '\<pra' $inputFile"
+grep '\<pra' $inputFile
+
+echo ""
+echo ""
+
+# d) End of the word, we use the `\>' flag:
+echo "grep 'ne\>' $inputFile"
+grep 'ne\>' $inputFile
+
+echo ""
+echo ""
+
 
 echo "${green}==============================="
 echo "$0 - end"
