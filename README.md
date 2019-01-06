@@ -42,3 +42,14 @@ This folder holds sub-folders according to topics,  more or less under the same 
 
 * good link to short "code tutorilas":https://github.com/dev-area/linux/tree/master/userspace
 
+# miscellaneousTopics
+
+This folder contains sub folders each of which on a praticular utility/topic that is worth mention it own it own.
+
+- grep: Basic usage and common used options and variatoions.
+
+- sed: Introduction and the most common "build-in" commands of it.
+
+- serviceInSystemd: A basic guide on how to add a simple service to `systemd`.
+ 
+
