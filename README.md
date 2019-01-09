@@ -51,5 +51,11 @@ This folder contains sub folders each of which on a praticular utility/topic tha
 - sed: Introduction and the most common "build-in" commands of it.
 
 - serviceInSystemd: A basic guide on how to add a simple service to `systemd`.
+
+# snippets
+
+This folder contains all sort of utilities and "general purpose" script that might be handfull in many situations.
+
+- utilites.sh: File handling, error message displaying.
  
 

@@ -42,6 +42,11 @@ function displayError {
 }
 
 
+<< ///
+This function gets a string that should be outputed, and it outputs it
+as an "verbose" (with GREEN color onto the STD - terminal).
+ARG1 - message to be disaplyed as error message.
+///
 function displayMessageInGreen {
 	echo "${green} $1 ${reset}"
 }
