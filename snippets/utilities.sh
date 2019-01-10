@@ -102,8 +102,10 @@ function createFile {
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # for testing the utilties functinos.
 
+<< ///
 echo "utilties - start"
 
 createFile file1 .
 
 echo "utilties - end"
+///
