@@ -78,7 +78,8 @@ function fastCommit {
 		displayError "fastCommit - doCommit raised an error"
 		return $ERROR
 	fi
-
+	
+	# 4) git push
 	git push
 	if [ ! $? -eq 0 ]
 	then
