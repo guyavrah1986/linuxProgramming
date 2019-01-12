@@ -50,6 +50,7 @@ function doCommit {
 function fastCommit {
 	local deletedFilesLines=$(git status | grep 'deleted:')
 	echo "fastCommit - git status deleted gave:$deletedFilesLines"
+	# 1) git rm (remove deleted files)
 	if [ ! -z "$deletedFilesLines" ]
 	then
 		echo "fastCommit - starting by deleting the required files"
@@ -61,7 +62,8 @@ function fastCommit {
 		displayError "fastCommit - deletingFiles raised an error"
 		return $ERROR
 	fi
-		
+	
+	# 2) git add -A	
 	addModifiedAndUntracktedFiles
 	if [ ! $? -eq 0 ]
 	then
@@ -69,10 +71,18 @@ function fastCommit {
 		return $ERROR
 	fi
 	
+	# 3) git commit
 	doCommit
 	if [ ! $? -eq 0 ]
 	then
 		displayError "fastCommit - doCommit raised an error"
+		return $ERROR
+	fi
+
+	git push
+	if [ ! $? -eq 0 ]
+	then
+		displayError "fastCommit - git push raised an error"
 		return $ERROR
 	fi
 
