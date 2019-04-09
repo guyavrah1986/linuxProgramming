@@ -5,3 +5,5 @@
 	- https://www.davidpashley.com/articles/writing-robust-shell-scripts/
 	- https://stackoverflow.com/a/25361436/1971003
 
+- shareVarBetweenScripts: Contains basic usage of sharing (passing) variables simple and "complex" (such as accossiative array) between different scripts.
+
