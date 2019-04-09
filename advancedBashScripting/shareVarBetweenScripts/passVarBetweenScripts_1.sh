@@ -9,6 +9,8 @@
 # 2) Once this command is done, the script CALLED_SCRIPT_NAME was "sourced" into this script, so every function/variable that is defined/declared in that 
 #    script can be called/used in this current script. In the specific case that the "sourced" script contains ONLY function, you can think of it as a mechanism 
 #    to "emulate" a "library" of shell functions.
+#
+# 3) This declares an associative array that can be "seen" by the other script (in this case I used the other script's function to fill it with values).
 #####################################################################################################################################################################
 #####################################################################################################################################################################
 
@@ -17,7 +19,7 @@
 # -----------------
 SCRIPT_NAME=${0##*/} # 1)
 CALLED_SCRIPT_NAME="passVarBetweenScripts_2.sh"
-declare -A ARR_1
+declare -A ARR_1 # 3)
 
 
 # functions:
@@ -30,6 +32,10 @@ function pass_array_to_other_script {
 
 	. ${CALLED_SCRIPT_NAME} # 2)  
 	func_to_fill_array_with_values "first_arg_to_other_script"
+	for i in "${!ARR_1[@]}"
+	do
+		echo "ARR_1[$i]:${ARR_1[$i]}"
+	done
 	
 	echo "${log_prefix} - end"
 } 
