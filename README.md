@@ -44,18 +44,19 @@ This folder holds sub-folders according to topics,  more or less under the same 
 
 # miscellaneousTopics
 
-This folder contains sub folders each of which on a praticular utility/topic that is worth mention it own it own.
+This folder contains sub folders each of which on a particular utility/topic that is worth mention it own it own.
 
-- grep: Basic usage and common used options and variatoions.
+- grep: Basic usage and common used options and variations.
 
 - sed: Introduction and the most common "build-in" commands of it.
 
 - serviceInSystemd: A basic guide on how to add a simple service to `systemd`.
 
+- environemtVariables: A basic guide regarding what they are, and how to use (utilize) them.
 # snippets
 
 This folder contains all sort of utilities and "general purpose" script that might be handfull in many situations.
 
-- utilites.sh: File handling, error message displaying.
+- utilities.sh: File handling, error message displaying.
  
 
