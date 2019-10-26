@@ -1,7 +1,7 @@
 1. Every program is automatically "linked" into 3 files of its OWN:
-0) STDIN - input (defaults to terminal)
-1) STDOUT - output (defaults to terminal)
-2) STDERR - error messages, output (defaults to terminal)
+0) STDIN - input (defaults "from" terminal)
+1) STDOUT - output (defaults "to" terminal)
+2) STDERR - error messages, output (defaults "to" terminal)
 
 Using the redirection utility (>) we can "redirect" any output of any command into a DIFFERNT file of "our own".
 NOTE: When we redirecting the oputput of a command into a file, that file will FIRST be created (if it does not exist) and only then
@@ -15,7 +15,7 @@ file, we can do so by piping, FIRST to out "final" destination file, and then re
 the STDOUT, like below:
    the command     the final destination  redirecting STDERR to STDOUT 
 $ <some command> > $errAndOutputFileName 2>&1
-
+NOTE: If this "stdout&stderr combination" does NOT take palce in the command, then by default, stderr is NOT passed to the command followed by the pipe.
 
 4. Pipes (|) are the way that one program (command) can pass on inpout to another program, usually it will be its output.
 Several pipes can be joined together.
