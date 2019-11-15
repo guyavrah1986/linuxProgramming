@@ -10,3 +10,5 @@ A process is a (collection of) thread of execution and other context, such as ad
 
 # Jobs
 The shell has the concept of "foreground" jobs and "background" jobs. Foreground jobs are process groups with control of the terminal, and background jobs are process groups without control of the terminal.
+- It is possible to "pass" job from the foreground to the background and vice versa using the `fg` and `bg` command respectively.
+- The "current" job considered to be the last job that was stopped when it was in the foreground or the last job that was started in the background.

@@ -28,6 +28,11 @@ echo "${blue}${script_name} - about to start script:${background_process_script_
 echo "${blue}${script_name} - displaying all jobs in this shell session:${reset}"
 jobs
 
+# when starting a new "job", fir example by running  a certain script, two things (numbers) are displayed right after
+# the job started to run:
+# [1] 3244
+# [1] - is the job number.
+# 3244 - is the PID (process ID) of this job.
 echo "${green}===============================${reset}"
 echo "${script_name} - end"
 echo "${green}===============================${reset}"
